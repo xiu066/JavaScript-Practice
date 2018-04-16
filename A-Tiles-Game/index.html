@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+    <h1> Tiles </h1>
+    <p id="clickcount"></p>
+    <table>
+    <tr>
+    <td><img id="11" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="12" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="13" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="14" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    </tr>
+    <tr>
+    <td><img id="21" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="22" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="23" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="24" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    </tr>
+    <tr>
+    <td><img id="31" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="32" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="33" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="34" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    </tr>
+    <tr>
+    <td><img id="41" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="42" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="43" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    <td><img id="44" src="images/bg.jpg" onclick="clicktile(this)" width="128" height="128" /></td>
+    </tr>
+    </table>
+
+
+    <script>
+    var lasttileflag=0;
+    var lasttileid=0;
+    var count=0;
+    document.getElementById("clickcount").innerHTML="Click Count: "+count;
+    function clicktile(id){
+      count++; //点击计数
+
+      var currentflag=0;
+      var currenttileid=event.target.id;
+          switch (currenttileid) {
+          case "11":
+            id.src="images/china.png";
+            currentflag="china";
+            break;
+          case "12":
+            id.src="images/russia.png";
+            currentflag="russia";
+            break;
+          case "13":
+            id.src="images/japan.png";
+            currentflag="japan";
+            break;
+          case "14":
+            id.src="images/uk.png";
+            currentflag="uk";
+            break;
+          case "21":
+            id.src="images/germany.png";
+            currentflag="germany";
+            break;
+          case "22":
+            id.src="images/japan.png";
+            currentflag="japan";
+            break;
+          case "23":
+            id.src="images/southkorea.png";
+            currentflag="southkorea";
+            break;
+          case "24":
+            id.src="images/uk.png";
+            currentflag="uk";
+            break;
+          case "31":
+            id.src="images/germany.png";
+            currentflag="germany";
+            break;
+          case "32":
+            id.src="images/southkorea.png";
+            currentflag="southkorea";
+            break;
+          case "33":
+            id.src="images/france.png";
+            currentflag="france";
+            break;
+          case "34":
+            id.src="images/usa.png";
+            currentflag="usa";
+            break;
+          case "41":
+            id.src="images/russia.png";
+            currentflag="russia";
+            break;
+          case "42":
+            id.src="images/china.png";
+            currentflag="china";
+            break;
+          case "43":
+            id.src="images/usa.png";
+            currentflag="usa";
+            break;
+          case "44":
+            id.src="images/france.png";
+            currentflag="france";
+            break;
+          default:
+            break;
+          }
+ if(currenttileid.length!=3){ //当前点击不是一个已配对的
+    if (currentflag==lasttileflag &&currenttileid!=lasttileid) {//当前翻开国旗和上一个相同, 并且不是同一个tile
+        document.getElementById(lasttileid).id="0"+lasttileid;  //已配对的被点击不执行任何操作
+        document.getElementById(currenttileid).id="0"+currenttileid;  //已配对的被点击不执行任何操作
+        lasttileflag=0;
+        }
+    else if (currentflag!=lasttileflag && lasttileflag==0) {//当前翻开国旗和上一个不同，并且上一个是已完成配对的
+        lasttileid=currenttileid;
+        lasttileflag=currentflag;
+        }
+    else if (currentflag!=lasttileflag && lasttileflag!=0 && currentflag!=0) {//当前翻开国旗和上一个不同，并且上一个不是已完成配对的
+        document.getElementById(lasttileid).src="images/bg.jpg";
+        lasttileid=currenttileid;
+        lasttileflag=currentflag;
+        }
+    else {//(currentflag==lasttileflag &&currenttileid==lasttileid) //连续点击同一个tile
+        lasttileid=currenttileid;
+        lasttileflag=currentflag;
+        }
+    }
+document.getElementById("clickcount").innerHTML="Click Count: "+count;
+    return lasttileid, lasttileflag, count;
+  }
+    </script>
+</body>
+</html>

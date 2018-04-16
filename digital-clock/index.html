@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Digital Clock</title>
+    <style>
+*{ margin: 0; padding: 0; }
+
+        #clock{
+        width: 750px; height: 150px;
+        margin: 50px auto;
+        }
+        #clock>img{
+        width: 110px; height: 144px;
+        margin-top: 7px;
+        position: relative;
+        }
+        #clock>span{
+        vertical-align:top;
+        font-size: 100px;
+        color: #aaa;
+        }
+  	</style>
+    <script>
+        window.onload=function(){
+            //array of six image elements
+            var aImg=document.getElementById("clock").getElementsByTagName("img");
+            var startpoint=new Date();
+            var prevtime=insertZero(startpoint.getHours())+insertZero(startpoint.getMinutes())+insertZero(startpoint.getSeconds());
+            var nexttime="";
+            var arr=[];//which image shold be changed in the next time
+            var timer=null;
+
+            //use digital images to display current time
+            for(var i=0;i<aImg.length;i++){//i<6 the same??? Yes it is.
+                aImg[i].src="./images/"+prevtime.charAt(i)+".jpg";
+            }
+
+            //change images per 1000ms
+            setInterval(imageChange, 1000);
+            function imageChange(){
+                var now=new Date();
+                nexttime=insertZero(now.getHours())+insertZero(now.getMinutes())+insertZero(now.getSeconds());
+                toCompare(prevtime,nexttime);
+                prevtime=nexttime;
+            }
+
+            function toCompare(str1, str2){
+                arr=[];
+                for(var i=0;i<str1.length;i++){
+                    if(str1.charAt(i)!=str2.charAt(i)){
+                        arr.push(i);
+                    }
+                }
+                startMove();//change time image
+            }
+
+            //digital image reverse effect
+            function startMove(){
+                var speed=-16;
+                timer=setInterval(function(){
+                    for(var i=0;i<arr.length;i++){
+                        if(aImg[arr[i]].offsetHeight==0){
+                            speed=16;
+                            aImg[arr[i]].src = "./images/" + nexttime.charAt( arr[i] ) + ".jpg";
+                        }//if image(previous time) is shortened to height 0, new image(next time) is elongated with speed 4
+
+                        aImg[arr[i]].style.height=aImg[arr[i]].offsetHeight+speed+"px";
+                        aImg[arr[i]].style.top = aImg[arr[i]].offsetHeight/2 - 72 + "px";
+
+                        if(aImg[arr[i]].offsetHeight==144){
+                            clearInterval(timer);
+                        }
+                    }
+                },10);
+            }
+            //insert 0 in front of single-digit time numbers
+            function insertZero (num){
+                if(num<10){
+                    return num="0"+num;
+                }
+                else{//is it necessarry??? yes! It is for transferring num into string.
+                    return num=num+"";
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="clock">
+        <img src="./images/0.jpg" alt="0">
+        <img src="./images/0.jpg" alt="0">
+        <span>:</span> <!-- use <span> to separate inline elements in a document -->
+        <img src="./images/0.jpg" alt="0">
+        <img src="./images/0.jpg" alt="0">
+        <span>:</span>
+        <img src="./images/0.jpg" alt="0">
+        <img src="./images/0.jpg" alt="0">
+    </div>
+</body>
+</html>
