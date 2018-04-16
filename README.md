@@ -12,5 +12,4 @@ Mainly from "30 Day Vanilla JS Challenge" and some other interesting projects</b
 * [JS and CSS Clock](http://htmlpreview.github.io/?https://github.com/xiu066/JavaScript-Practice/blob/master/JS%20and%20CSS%20Clock/index.html)
 * [JS and SVG Clock](http://htmlpreview.github.io/?https://github.com/xiu066/JavaScript-Practice/blob/master/JS%20and%20SVG%20Clock/index.html)
 * [Type Ahead](http://htmlpreview.github.io/?https://github.com/xiu066/JavaScript-Practice/blob/master/Type%20Ahead/index.html)
-* [digital-clock](http://htmlpreview.github.io/?https://github.com/xiu066/JavaScript-Practice/blob/master/digital-clock/index.html）
-
+* [digital-clock](http://htmlpreview.github.io/?https://github.com/xiu066/JavaScript-Practice/blob/master/digital-clock/index.html)
