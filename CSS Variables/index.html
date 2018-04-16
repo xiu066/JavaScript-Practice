@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
+</head>
+<body>
+  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+
+    <!-- Any attribute on any element whose attribute name starts with data- is a data attribute -->
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+  </div>
+
+  <img src="https://media.gq.com/photos/5ac516bf07785e77c5270082/master/w_1600/james-harden-gucci-y-3-rolex-cover-gq-may-2018.jpg" width="900">
+
+  <style>
+    :root {
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
+    }
+
+    img {
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+    }
+
+    .hl {
+        color: var(--base);
+    }
+    /*
+      misc styles, nothing to do with CSS variables
+    */
+
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 40px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width:100px;
+    }
+  </style>
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+        //Any attribute on any element whose attribute name starts with data- is a data attribute.
+        const suffix = this.dataset.sizing || '';
+        /*Document.documentElement returns the Element that is the root element of the document
+          for example, the <html> element for HTML documents*/
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+        //${this.name} equals to ${this.id}
+    }
+
+    //especially for changing the base color
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    //for dynamically showing the change effect of spacing and blur
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+
+  </script>
+
+</body>
+</html>
