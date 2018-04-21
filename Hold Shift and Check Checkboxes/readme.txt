@@ -1,0 +1,1 @@
+Fix the bug of when the last checkbox is checked with holding shift key.
