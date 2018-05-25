@@ -1,0 +1,122 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+h2 {
+  margin-top: 20px;
+  font-family: Lobster, Monospace;
+  font-size: 60px;
+  color: white;
+}
+#count {
+  background-color: pink;
+  height: 80px;
+  width: 80px;
+  margin-bottom: -20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 600px;
+  line-height: 80px;
+  color: grey;
+  font-size: 40px;
+}
+#start {
+  display: ;
+  background-color: green;
+  height: 60px;
+  width: 60px;
+  margin-top: -33px;
+  margin-bottom: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 600px;
+  line-height: 0px;
+  color: white;
+  font-size: 18px;
+}
+#start:hover {
+  -webkit-filter: brightness(150%); /* Chrome, Safari, Opera */
+  filter: brightness(150%);
+}
+#start:active {
+  -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
+  filter: brightness(50%);
+  border-style: inset;
+  border-width: 4px;
+  border-color: grey;
+}
+#reset {
+  display: none;
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  margin-top: -33px;
+  margin-bottom: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 600px;
+  line-height: 0px;
+  color: white;
+  font-size: 18px;
+}
+#reset:hover {
+  -webkit-filter: brightness(150%); /* Chrome, Safari, Opera */
+  filter: brightness(150%);
+}
+#reset:active {
+  -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
+  filter: brightness(50%);
+  border-style: inset;
+  border-width: 4px;
+  border-color: grey;
+}
+#strict {
+  background-color: silver;
+  height: 80px;
+  width: 80px;
+  margin-top: -30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 600px;
+  line-height: 20px;
+  color: red;
+  font-size: 25px;
+}
+.container {
+  margin-top: 20px;
+  height: 800px;
+  width: 420px;
+}
+.box {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 600px;
+}
+#g{ 
+  background-color: green;
+  -webkit-filter: brightness(90%); /* Chrome, Safari, Opera */
+  filter: brightness(90%);
+  height: 200px;
+  width: 200px;}
+#r{ 
+  background-color: red; 
+  -webkit-filter: brightness(90%); /* Chrome, Safari, Opera */
+  filter: brightness(90%);
+  height: 200px;
+  width: 200px;
+}
+#y{ 
+  background-color: yellow; 
+  -webkit-filter: brightness(90%); /* Chrome, Safari, Opera */
+   filter: brightness(90%);
+  height: 200px;
+  width: 200px;
+}
+#b{ 
+  background-color: blue;
+  -webkit-filter: brightness(90%); /* Chrome, Safari, Opera */
+  filter: brightness(90%);
+  height: 200px;
+  width: 200px;
+}

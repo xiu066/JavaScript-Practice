@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	background-color: yellow;
+}
+
+.content{
+	position: relative;
+	margin: 8% auto auto auto;
+	width: 40%;
+	padding:40px 50px;
+	border-radius: 20px;
+	background: rgba(255,255,255,0.6);	/*背景透明而上面的内容不透明*/
+	
+}
+
+.quote i{
+	font-size: 4em;
+	color: black;
+}
+
+.quote-content{
+	display: inline;
+	font-size: 2em;
+	color: black;
+}
+
+.author{
+	position: relative;
+	text-align: right;
+	
+	color: black;
+}
+
+.author i{
+	font-size: 4em;
+	color: black;
+}
+
+.quote-author{
+	font-size: 1.5em;
+	display: inline;
+}
+
+
+
+.addition{
+	width: 100%;
+	position: relative;
+ margin:auto;
+ display:block;
+  margin-top: 20px;
+}
+
+
+.btn_next{
+	padding:4px 7px;
+	font-size: 24px;
+	border: 0;
+	border-radius: 8px;
+  margin-top: -24px;
+}
+
+
+.addition a{
+	
+	text-align: right;
+  
+}
+
+	.content .quote{
+		position: relative;
+	}
+	.content .author{
+		position: relative;
+	}
+}

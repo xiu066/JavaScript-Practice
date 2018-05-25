@@ -1,0 +1,49 @@
+body {
+  background-color: grey;  
+}
+h2 {
+  margin-top: 40px;
+  font-family: Lobster, Monospace;
+  font-size: 60px;
+  color: black;
+}
+.searchBar {
+  width:700px;
+  position: relative;
+  margin: 60px auto auto auto;
+}
+#searchText {
+  height: 45px;
+  width: 500px;
+  font-size: 20px;
+}
+.btn {
+  position: relative;
+  height: 45px;
+  width: 60px;
+  font-size: 23px;
+  margin-top: -7px
+}
+
+.container {
+  position: relative;
+  margin: 20px auto auto auto;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+}
+ul li{
+  background-color: rgba(255,255,255,0.6);
+  border: 1px solid black;
+  margin: 10px;
+  padding: 5px;
+  border-left: 8px solid black;
+}
+ul li a{
+  color: black;
+  font-size: 20px;
+}
+#noResult {
+  font-size:40px;
+}

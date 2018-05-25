@@ -1,0 +1,73 @@
+body {
+  background-color: rgba(1,90,120);
+  
+}
+h2 {
+  margin-top: 16px;
+  font-family: Lobster, Monospace;
+  font-size: 50px;
+  color: white;
+}
+.container {
+  position: relative;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 20px;
+  height: 550px;
+  width: 500px;
+  margin: 3% auto auto auto;
+}
+#buttons {
+  height: 500px;
+  width: 306px;
+  margin: 4% 95px auto auto;
+}
+#answer {  
+  background-color: rgba(1,90,120);
+  height: 50px;
+  width: 470px;
+  margin: 3% auto auto auto;
+  border-radius: 5px;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+}
+#history {
+  background-color: rgba(1,90,120);
+  height: 20px;
+  width: 470px;
+  margin: 1% auto auto auto;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 4px;
+  font-size: 30px
+}
+.cubS {
+  width: 80px;
+  height: 80px;
+}
+.cubL {
+  width: 164px;
+  height: 80px;
+}
+.cubH {
+  width: 80px;
+  height: 164px;
+}
+.red {
+  background-color: red;
+  color: white;
+}
+.operator {
+  background-color: rgba(10,120,10);
+  color: white;
+}
+.equal {
+  background-color: rgba(250,140,10);
+  color: white;
+  font-size: 50px
+}

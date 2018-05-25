@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro Clock</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<body>
+  <div class="container-fluid">
+    <h2 class="text-center">Pomodoro Clock</h2>
+    <div class="container">
+      <div class="row title">
+        <div class="col-xs-6" id="workingTime"><p>Work Time</p></div>
+        <div class="col-xs-6" id="breakingTime"><p>Break Time</p></div>
+      </div>
+      <div class="row timer">
+        <div class="col-xs-6" id="working">0:00</div>
+        <div class="col-xs-6" id="breaking">0:00</div>
+      </div>
+      <div class="row setters">
+        <div class="col-xs-6">
+          <input id="work" type="range" min="0" max="60" step="1" value="0">
+        </div>
+        <div class="col-xs-6">
+          <input id="break" type="range" min="0" max="60" step="1" value="0">
+        </div>
+      </div>
+      <div class="buttons">  
+          <button class="btn btn-block btn-primary start" onclick="startCount()">START</button>
+          <button class="btn btn-block btn-primary reset" onclick="reset()">RESET</button>
+      </div>
+    </div>
+  </div>
+</body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+body {
+  background-color: rgba(1,90,120);
+  
+}
+h2 {
+  margin-top: 20px;
+  font-family: Lobster, Monospace;
+  font-size: 40px;
+  color: white;
+}
+.container {
+  margin-top: 20px;
+}
+.row {
+  position: relative;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 20px;
+  height: 150px;
+  width: 600px;
+  margin: 10px auto auto auto;
+}
+.logo {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+img {
+  border-radius: 60px;
+  height: 90px;
+  width: 90px;  
+}
+.name {
+  margin-top: 5px;
+  text-align: left;
+}
+.online {
+  margin-top: 60px;
+  color: green;
+  font-size: 20px;
+}
+.offline {
+  margin-top: 60px;
+  color: red;
+  font-size: 20px;
+}

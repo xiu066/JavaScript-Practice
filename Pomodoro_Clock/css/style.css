@@ -1,0 +1,56 @@
+body {
+  background-color: rgba(1,90,120);
+  
+}
+
+h2 {
+  margin-top: 40px;
+  font-family: Lobster, Monospace;
+  font-size: 60px;
+  color: white;
+}
+
+.container {
+  position: relative;
+  background-color: rgba(255,255,255,0.6);
+  height: 400px;
+  width: 700px;
+  border-radius: 20px;
+  padding:40px 50px;
+  margin: 5% auto auto auto;
+}
+p {
+  margin-top: 0px;
+  font-family: Roboto;
+  font-size: 25px;
+  color: rgba(1,90,120);
+}
+.timer {
+  margin-top: 0px;
+  font-family: Roboto;
+  font-size: 80px;
+}
+#working {
+  color: rgba(1,90,120);
+}
+#breaking {
+  color: rgba(1,90,120);
+}
+
+.setters {
+  margin-top: 20px;
+  
+}
+.buttons {
+  margin-top: 30px;
+  
+}
+.btn {
+  font-size: 20px;
+}
+.start {
+  color: rgba(0,255,0);
+}
+.stop {
+  color: rgba(200,50,50);
+}
